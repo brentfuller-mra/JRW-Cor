@@ -22,18 +22,17 @@ jrelwgts_cor <- function(cor_mat) {
   
   nvar <- ncol(cor_mat)
   
-  # calculate submatrices
+  # parse submatrices
   # rxx = correlation among predictors; rxy = correlation between Y and predictors
   rxx <- cor_mat[2:nvar, 2:nvar, drop = FALSE]
   rxy <- cor_mat[2:nvar, 1, drop = FALSE]
   
   # spectral decomposition (eigenvalues & eigenvectors)
-  # lambda is the best orthogonal approximation of the predictor matrix
   eigen_decomp <- eigen(rxx)
   evec <- eigen_decomp$vectors
   ev   <- eigen_decomp$values
   
-  # Ensure eigenvalues aren't slightly negative due to floating-point precision
+  # ensure eigenvalues aren't slightly negative due to floating-point precision
   ev[ev < 0] <- 0 
   
   # calc delta accouting for possibility of small dimensions

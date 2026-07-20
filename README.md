@@ -15,7 +15,7 @@ For general RW and related analyses, just use the relaimpo, domir, leaps, glmnet
 
 ## Usage and output
 
-- **Matrix Input:** Accepts a square, symmetric correlation matrix or data frame.
+- **Matrix Input:** Accepts a square, symmetric correlation matrix or data frame. The first column/row MUST be the dependent variable (Y).
 - **Basic Output:** Returns a `tibble` with the raw weights and relative importances for each predictor variable.
 
 ## Installation

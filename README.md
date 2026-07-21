@@ -12,6 +12,8 @@ For general RW and related analyses, just use the relaimpo, domir, leaps, glmnet
 
 1. You can account for missing values via pairwise deletion in a correlation matrix.
 2. You can feed the function polychoric (or tetrachoric) correlation matrices, which in some circles is seen as more mathematically rigorous for the ordinal Likert scales typically found in consumer surveys.
+3. You only have published matrix data, where the underlying participant-level dataset is unavailable.
+4. Other methods of calculating relative weights can be computationally expensive.
 
 ## Usage and output
 
